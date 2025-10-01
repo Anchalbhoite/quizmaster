@@ -52,7 +52,9 @@ quizmaster/
 
    npm install
    
- create .env
+   
+
+create .env
 PORT=5000
 MONGO_URI=mongodb+srv://Anchal:Anchal05@cluster0.qxuf3fk.mongodb.net/quizmaster?retryWrites=true&w=majority
 JWT_SECRET=mysecretkey
