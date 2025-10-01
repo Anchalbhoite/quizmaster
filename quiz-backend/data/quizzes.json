@@ -1,0 +1,104 @@
+[
+  {
+    "id": 1,
+    "title": "JavaScript Fundamentals",
+    "category": "Technology",
+    "difficulty": "medium",
+    "timeLimit": 15,
+    "description": "Test your knowledge of JavaScript basics",
+    "questions": [
+      {
+        "id": 1,
+        "question": "What is the output of typeof null in JavaScript?",
+        "options": ["null", "undefined", "object", "boolean"],
+        "correctAnswer": 2,
+        "difficulty": "medium",
+        "category": "Technology"
+      },
+      {
+        "id": 2,
+        "question": "Which method is used to add an element to the end of an array?",
+        "options": ["push()", "pop()", "shift()", "unshift()"],
+        "correctAnswer": 0,
+        "difficulty": "easy",
+        "category": "Technology"
+      },
+      {
+        "id": 3,
+        "question": "What does 'this' keyword refer to in JavaScript?",
+        "options": ["The global object", "The current function", "The current object", "It depends on context"],
+        "correctAnswer": 3,
+        "difficulty": "hard",
+        "category": "Technology"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "World History",
+    "category": "History",
+    "difficulty": "medium",
+    "timeLimit": 20,
+    "description": "Explore major historical events and figures",
+    "questions": [
+      {
+        "id": 4,
+        "question": "When did World War II end?",
+        "options": ["1944", "1945", "1946", "1947"],
+        "correctAnswer": 1,
+        "difficulty": "easy",
+        "category": "History"
+      },
+      {
+        "id": 5,
+        "question": "Who was the first person to walk on the moon?",
+        "options": ["Buzz Aldrin", "Neil Armstrong", "Michael Collins", "John Glenn"],
+        "correctAnswer": 1,
+        "difficulty": "easy",
+        "category": "History"
+      },
+      {
+        "id": 6,
+        "question": "Which empire was ruled by Julius Caesar?",
+        "options": ["Greek Empire", "Roman Empire", "Byzantine Empire", "Ottoman Empire"],
+        "correctAnswer": 1,
+        "difficulty": "medium",
+        "category": "History"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Basic Science",
+    "category": "Science",
+    "difficulty": "easy",
+    "timeLimit": 12,
+    "description": "Fundamental science concepts everyone should know",
+    "questions": [
+      {
+        "id": 7,
+        "question": "What is the chemical symbol for water?",
+        "options": ["H2O", "CO2", "O2", "H2"],
+        "correctAnswer": 0,
+        "difficulty": "easy",
+        "category": "Science"
+      },
+      {
+        "id": 8,
+        "question": "How many bones are in the adult human body?",
+        "options": ["196", "206", "216", "226"],
+        "correctAnswer": 1,
+        "difficulty": "medium",
+        "category": "Science"
+      },
+      {
+        "id": 9,
+        "question": "What planet is known as the Red Planet?",
+        "options": ["Venus", "Jupiter", "Mars", "Saturn"],
+        "correctAnswer": 2,
+        "difficulty": "easy",
+        "category": "Science"
+      }
+    ]
+  }
+]
