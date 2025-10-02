@@ -53,32 +53,34 @@ cd quizmaster
 2️⃣ Setup Backend
 cd backend
 npm install
+```bash
 
 
 Create a .env file inside backend/ and add:
-
+```bash
 PORT=5000
 MONGO_URI=mongodb+srv://Anchal:Anchal05@cluster0.qxuf3fk.mongodb.net/quizmaster?retryWrites=true&w=majority
 JWT_SECRET=mysecretkey
 VITE_API_URL=http://localhost:5000
-
+```
 
 Run backend server:
-
+```bash
 npx nodemon server.js
-
+```
 
 Server will run on 👉 http://localhost:5000
 
 3️⃣ Setup Frontend
+```bash
 cd frontend
 npm install
 npm run dev
-
-
+```
 Frontend will run on 👉 http://localhost:3000
 
 📦 API Endpoints
+```bash
 🔑 Auth
 POST   /api/auth/signup     # Register a new user
 POST   /api/auth/login      # Login and receive JWT token
@@ -91,3 +93,5 @@ GET    /api/quizzes/:id     # Get quiz details by ID
 POST   /api/results               # Save quiz result (authenticated)
 GET    /api/results/leaderboard   # Get top scores
 GET    /api/results/user/:userId  # Get all results for a user
+```
+
