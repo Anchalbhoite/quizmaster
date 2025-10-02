@@ -27,7 +27,9 @@ Authentication: JWT
 
 Version Control: Git & GitHub
 
+
 📂 Project Structure
+```
 quizmaster/
 │── backend/          # Express API
 │   ├── controller/   # API controllers
@@ -42,6 +44,7 @@ quizmaster/
 │
 │── README.md         # Project documentation
 └── .gitignore        # Ignored files
+```
 
 🛠️ Setup & Run Locally
 
@@ -53,9 +56,7 @@ cd quizmaster
 2️⃣ Setup Backend
 cd backend
 npm install
-```bash
-
-
+```
 Create a .env file inside backend/ and add:
 ```bash
 PORT=5000
@@ -94,4 +95,5 @@ POST   /api/results               # Save quiz result (authenticated)
 GET    /api/results/leaderboard   # Get top scores
 GET    /api/results/user/:userId  # Get all results for a user
 ```
+
 
