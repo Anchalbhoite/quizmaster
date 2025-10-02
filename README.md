@@ -44,7 +44,9 @@ quizmaster/
 └── .gitignore        # Ignored files
 
 🛠️ Setup & Run Locally
-1️⃣ Clone the repository
+
+```bash
+#1️⃣ Clone the repository
 git clone https://github.com/anchalbhoite/quizmaster.git
 cd quizmaster
 
@@ -86,6 +88,6 @@ GET    /api/quizzes         # Get all quizzes
 GET    /api/quizzes/:id     # Get quiz details by ID
 
 📊 Results
-POST   /api/results         # Save quiz result (authenticated)
+POST   /api/results               # Save quiz result (authenticated)
 GET    /api/results/leaderboard   # Get top scores
-GET    /api/results/user/:userId  # Get all results for a us
+GET    /api/results/user/:userId  # Get all results for a user
