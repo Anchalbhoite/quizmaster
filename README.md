@@ -44,16 +44,19 @@ quizmaster/
 ├── README.md                # Project documentation
 └── .gitignore               # Ignored files
 
-⚙️ Setup & Installation
-1. Clone the Repository
-git clone https://github.com/Anchalbhoite/quizmaster.git
-cd quizmaster/backend
 
-2. Backend Setup
+
+🛠️ Setup & Run Locally
+1️⃣ Clone the repository
+git clone https://github.com/anchalbhoite/quizmaster.git
+cd quizmaster
+
+2️⃣ Setup Backend
+cd backend
 npm install
 
 
-Create a .env file in the backend folder:
+Create a .env file inside backend/ and add:
 
 PORT=5000
 MONGO_URI=mongodb+srv://Anchal:Anchal05@cluster0.qxuf3fk.mongodb.net/quizmaster?retryWrites=true&w=majority
@@ -61,27 +64,22 @@ JWT_SECRET=mysecretkey
 VITE_API_URL=http://localhost:5000
 
 
-Run the backend server:
+Run backend server:
 
 npx nodemon server.js
 
 
-Backend runs on: http://localhost:5000
 
-3. Frontend Setup
+Server will run on 👉 http://localhost:5000
 
-Navigate to the frontend folder:
-
-cd ../frontend
+3️⃣ Setup Frontend
+cd frontend
 npm install
-
-
-Run the frontend:
-
 npm run dev
 
 
-Frontend runs on: http://localhost:3000
+Frontend will run on 👉 http://localhost:3000
+
 
 📦 API Endpoints
 Auth
