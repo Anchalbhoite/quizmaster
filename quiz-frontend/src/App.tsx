@@ -245,6 +245,24 @@ useEffect(() => {
   }
 }, []);
 
+const [userStats, setUserStats] = useState({ quizzesCompleted: 0, averageScore: 0, rank: 0 });
+
+useEffect(() => {
+  const fetchStats = async () => {
+    if (!user) return;
+    try {
+      const token = localStorage.getItem("quizmaster_token") || "";
+      const data = await apiRequest(`/api/result/stats`, "GET", undefined, token);
+      setUserStats(data);
+      
+    } catch (err) {
+      console.error("Error fetching stats", err);
+    }
+  };
+  fetchStats();
+}, [user, quizResults]);
+
+
   useEffect(() => {
     const fetchQuizzes = async () => {
       try {
@@ -577,7 +595,7 @@ useEffect(() => {
             </div>
             <div>
               <p className="text-2xl">
-                {quizResults.length}
+                {quizResults.length||userStats.quizzesCompleted}
               </p>
               <p className="text-sm text-muted-foreground">Quizzes Completed</p>
             </div>
@@ -590,7 +608,7 @@ useEffect(() => {
             </div>
             <div>
               <p className="text-2xl">
-                {quizResults.length > 0 ? Math.round(quizResults.reduce((acc, result) => acc + (result.score / result.totalQuestions * 100), 0) / quizResults.length) : 0}%
+                {quizResults.length > 0 ? Math.round(quizResults.reduce((acc, result) => acc + (result.score / result.totalQuestions * 100), 0) / quizResults.length) : 0 || userStats.averageScore}%
               </p>
               <p className="text-sm text-muted-foreground">Average Score</p>
             </div>
@@ -602,7 +620,7 @@ useEffect(() => {
               <Users className="h-6 w-6 text-purple-600 dark:text-purple-400" />
             </div>
             <div>
-              <p className="text-2xl">156</p>
+              <p className="text-2xl">{ }</p>
               <p className="text-sm text-muted-foreground">Global Ranking</p>
             </div>
           </CardContent>
@@ -855,7 +873,7 @@ useEffect(() => {
                 </Avatar>
                 <div className="flex-1">
                   <p>{user.userId?.name || "Unknown"}</p>
-                  <p className="text-sm text-muted-foreground">{user.quizzes || 0} quizzes completed</p>
+                  <p className="text-sm text-muted-foreground">{userStats.quizzesCompleted || 0} quizzes completed</p>
                 </div>
                 <div className="text-right">
                   <p className="text-lg">{user.score || 0}%</p>
@@ -863,6 +881,7 @@ useEffect(() => {
                 </div>
               </div>
             ))}
+
           </div>
         </CardContent>
       </Card>
